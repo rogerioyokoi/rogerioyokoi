@@ -5,6 +5,27 @@
 }
 ```
 
+```ts
+const linguages = [
+  'HTML',
+  'CSS',
+  'SASS/SCSS,
+  'JAVASCRIPT',
+  'TYPESCRIPT',
+]
+```
+
+```js
+const conhecimentos = [
+  'ANGULAR',
+  'VUE',
+  'ACESSIBILIDADE',
+  'SEO',
+  'SEMANTICA',
+  'GIT',
+]
+```
+
 <!-- ### Hi there 👋
 
 
