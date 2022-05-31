@@ -1,0 +1,26 @@
+{
+  "name": "rogerioyokoi",
+  "version": "1.0.0",
+  "description": "Public Readme on Github",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerioyokoi/rogerioyokoi.git"
+  },
+  "keywords": [
+    "Personal",
+    "Github"
+  ],
+  "author": "Rogério Yokoi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rogerioyokoi/rogerioyokoi/issues"
+  },
+  "homepage": "https://github.com/rogerioyokoi/rogerioyokoi#readme",
+  "dependencies": {
+    "mustache": "^4.2.0"
+  }
+}
