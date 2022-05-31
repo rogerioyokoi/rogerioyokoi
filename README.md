@@ -1,4 +1,11 @@
-### Hi there 👋
+```css
+#rogerioyokoi {
+  background: Front-End;
+  position: Brasil;
+}
+```
+
+<!-- ### Hi there 👋
 
 
 **rogerioyokoi/rogerioyokoi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -16,4 +23,4 @@ Here are some ideas to get you started:
 
 <div id="languages_block_id" align="center" style="align-content: center; text-align:center; margin: 20px 20px">
     <img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs?username=rogerioyokoi&show_icons=true&langs_count=8&layout=compact" alt="Top languages" />
-</div>
+</div> -->
