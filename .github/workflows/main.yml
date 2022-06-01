@@ -28,7 +28,10 @@ jobs:
       - name: Generate README file
         run: node index.js
       - name: Push changes
-        uses: actions-go/push@v1
+        uses: actions-go/push@main
+        with:
+          commit-message: '[Auto] update pre-puilt dist packages'
+          remote: origin
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
