@@ -28,7 +28,7 @@ jobs:
       - name: Generate README file
         run: node index.js
       - name: Push changes
-        uses: actions-go/push@main
+        uses: actions-go/push@master
         with:
           commit-message: '[Auto] update pre-puilt dist packages'
           remote: origin
