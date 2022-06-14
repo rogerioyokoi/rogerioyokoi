@@ -1,7 +1,7 @@
 segunda-feira, 13 de junho 21:22 BRT
 # 🤙 Olá, prazer eu sou Rogério Yokoi
 
-<table width="100%">
+<table width="100%" style="width:100%; border: 0;">
   <tr>
     <td>
       
