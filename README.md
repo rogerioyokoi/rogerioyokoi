@@ -1,10 +1,12 @@
-segunda-feira, 13 de junho 21:17 BRT
+segunda-feira, 13 de junho 21:22 BRT
 # 🤙 Olá, prazer eu sou Rogério Yokoi
 
-<table style="width:100%">
+<table width="100%">
   <tr>
     <td>
-      Eu sou blá blá blá...
+      
+    Eu sou blá blá blá...
+  
     </td>
     <td align="right">
       teste 2
