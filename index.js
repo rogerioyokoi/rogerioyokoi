@@ -17,9 +17,6 @@ let DATA = {
     timeZoneName: 'short',
     timeZone: 'America/Sao_Paulo',
   }),
-  description: `
-    Eu sou blá blá blá...
-  `,
 };
 /**
   * A - We open 'main.mustache'
