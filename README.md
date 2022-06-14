@@ -4,9 +4,7 @@ segunda-feira, 13 de junho 21:17 BRT
 <table width="100%">
   <tr>
     <td>
-      
-    Eu sou blá blá blá...
-  
+      Eu sou blá blá blá...
     </td>
     <td align="right">
       teste 2
