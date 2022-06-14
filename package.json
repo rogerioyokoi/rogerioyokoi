@@ -4,7 +4,7 @@
   "description": "Public Readme on Github",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "readme:build": "node index.js"
   },
   "repository": {
     "type": "git",
