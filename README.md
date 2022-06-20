@@ -1,4 +1,4 @@
-domingo, 19 de junho 00:16 BRT
+domingo, 19 de junho 23:56 BRT
 # 🤙 Olá, prazer eu sou Rogério Yokoi
 
 ![https://www.linkedin.com/in/rogerioyokoi/](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white) 
