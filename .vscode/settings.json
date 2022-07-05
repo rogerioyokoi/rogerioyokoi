@@ -1,0 +1,5 @@
+{
+  // Create React App Reference
+  // https://create-react-app.dev/docs/adding-css-reset#indexcss
+  "css.lint.unknownAtRules": "ignore"
+}
