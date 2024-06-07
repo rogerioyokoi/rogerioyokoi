@@ -7,4 +7,7 @@ export default defineConfig({
     open: true,
   },
   plugins: [react()],
+  css: {
+    postcss: './postcss.config.ts',
+  },
 });
