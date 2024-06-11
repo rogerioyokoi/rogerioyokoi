@@ -32,17 +32,16 @@ module.exports = {
         'import/extensions': [
           'error',
           'ignorePackages',
-          { ts: 'never', tsx: 'never' },
+          {
+            ts: 'never',
+            tsx: 'never',
+            js: 'never',
+            jsx: 'never',
+          },
         ],
         '@typescript-eslint/no-shadow': ['error'],
-        '@typescript-eslint/explicit-function-return-type': [
-          'error',
-          { allowExpressions: true },
-        ],
-        'max-len': [
-          'warn',
-          { code: 100, ignoreComments: true, ignoreUrls: true },
-        ],
+        '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
+        'max-len': ['warn', { code: 100, ignoreComments: true, ignoreUrls: true }],
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
         'import/prefer-default-export': 'off',
@@ -50,15 +49,12 @@ module.exports = {
         'prettier/prettier': ['error', { endOfLine: 'auto' }],
       },
       settings: {
-        'import/extensions': [
-          '.js',
-          '.mjs',
-          '.jsx',
-          '.js',
-          '.jsx',
-          '.ts',
-          '.tsx',
-        ],
+        'import/extensions': ['.js', '.mjs', '.jsx', '.js', '.jsx', '.ts', '.tsx'],
+        'import/resolver': {
+          node: {
+            extensions: ['.js', '.jsx', '.ts', '.tsx'],
+          },
+        },
         react: {
           version: 'detect',
         },
