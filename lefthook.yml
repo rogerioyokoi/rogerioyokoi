@@ -33,3 +33,33 @@
 #       runner: node
 #     "any.go":
 #       runner: go run
+
+# Use this to build commit messages
+prepare-commit-msg:
+  commands:
+    commitzen:
+      interactive: true
+      run: npm run build:commit
+      env:
+        LEFTHOOK: 0
+
+# Use this to validate commit messages
+commit-msg:
+  commands:
+    'Lint commit message':
+      run: npm run lint:commit
+
+pre-commit:
+  parallel: true
+  commands:
+    'Lint Find and Fix':
+      run: npm run lint:fix {staged_files}
+    'Lint Format Code':
+      run: npm run lint:format:fix {staged_files}
+    'Test Related Source Files':
+      run: npm run test {staged_files}
+
+pre-push:
+  commands:
+    'Test Coverage':
+      run: npm run test:coverage
