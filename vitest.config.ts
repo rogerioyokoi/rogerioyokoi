@@ -18,9 +18,9 @@ export default mergeConfig(
         json: './coverage/json-report.json',
       },
       coverage: {
-        reporter: ['clover', 'cobertura', 'html', 'json', 'lcov'],
+        reporter: ['clover', 'cobertura', 'html', 'json', 'lcov', 'text'],
         provider: 'istanbul',
-        exclude: [...defaultCoverageExclude, '*.config.ts'],
+        exclude: [...defaultCoverageExclude, '*.config.{ts,js}'],
         thresholds: {
           branches: 0,
           functions: 0,
