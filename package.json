@@ -13,7 +13,7 @@
     "lint:format:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "lint:commit": "npx commitlint --from HEAD~1 --to HEAD",
     "test": "vitest --passWithNoTests",
-    "test:coverage": "vitest --coverage",
+    "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
     "preview": "vite preview"
   },
