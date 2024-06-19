@@ -15,10 +15,11 @@
     "test": "vitest --passWithNoTests",
     "test:staged": "vitest run --passWithNoTests",
     "test:coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui",
+    "test:ui": "vitest --ui --coverage",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
