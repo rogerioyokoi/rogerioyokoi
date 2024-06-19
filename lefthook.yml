@@ -56,7 +56,7 @@ pre-commit:
       run: npm run lint:fix {staged_files}
     'Lint Format Code':
       run: npm run lint:format:fix {staged_files}
-    'Test Related Source Files':
+    'Test Staged Files':
       run: npm run test {staged_files}
 
 pre-push:

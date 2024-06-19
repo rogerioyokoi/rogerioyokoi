@@ -16,7 +16,7 @@ module.exports = {
       jsx: true,
     },
   },
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'lefthook.yml', 'package*.json'],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh', 'prettier', 'react'],
   rules: {
