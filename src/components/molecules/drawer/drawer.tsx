@@ -2,7 +2,7 @@ import { XMarkIcon } from '@heroicons/react/16/solid';
 import { FC, PropsWithChildren, useEffect } from 'react';
 import IconButton from '../../atoms/iconButton/iconButton';
 
-interface DrawerProps extends PropsWithChildren {
+export interface DrawerProps extends PropsWithChildren {
   isOpen: boolean;
   onClose: () => void;
   direction?: 'left' | 'right' | 'top' | 'bottom';

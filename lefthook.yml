@@ -16,14 +16,17 @@ commit-msg:
 pre-commit:
   parallel: true
   commands:
-    'Lint Find and Fix':
+    'Lint and Fix Issues':
+      glob: '*.{js,ts,jsx,tsx}'
       run: npm run lint:fix {staged_files}
-    'Lint Format Code':
+    'Format Code':
+      glob: '*.{js,ts,jsx,tsx}'
       run: npm run lint:format:fix {staged_files}
-    'Test Staged Files':
+    'Run Tests on Staged Files':
+      glob: '*.{test,spec}.{js,ts,jsx,tsx}'
       run: npm run test:staged {staged_files}
 
 pre-push:
   commands:
-    'Test Coverage':
+    'Run Test Coverage':
       run: npm run test:coverage

@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 
-interface IconButtonProps extends PropsWithChildren {
+export interface IconButtonProps extends PropsWithChildren {
   onClick?: () => void;
   label: string;
   disabled?: boolean;
