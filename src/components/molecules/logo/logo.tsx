@@ -7,7 +7,7 @@ const Logo: FC = () => {
       <div className="w-12 h-12">
         <LogoIcon />
       </div>
-      <div>
+      <div className="hidden md:flex">
         <h1 className="flex flex-col">
           <span className="text-2xl">Rogério Yokoi</span>
           <small className="text-xs dark:text-gray-500">Engenheiro de Software Front-End</small>
