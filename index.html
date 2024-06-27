@@ -3,44 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Descrição do seu site aqui" />
-    <meta name="keywords" content="palavras-chave, separadas, por, vírgula" />
-    <meta name="author" content="Seu Nome" />
-    <meta name="github" content="URL_do_seu_perfil_no_GitHub" />
 
-    <!-- Metatags para SEO -->
-    <title>Rogério O. Yokoi | Engenheiro de Software Front-End</title>
+    <!-- Global Meta Tags -->
+    <meta name="author" content="Rogério O. Yokoi" />
+    <meta name="github" content="https://github.com/rogerioyokoi" />
+
+    <!-- SEO Meta Tags -->
+    <title>Rogério Yokoi | Engenheiro de Software Front-End</title>
+    <meta name="application-name" content="Rogério Yokoi | Engenheiro de Software Front-End" />
+    <meta name="apple-mobile-web-app-title" content="Rogério Yokoi | Engenheiro de Software Front-End" />
 
     <link rel="canonical" href="https://www.rogerioyokoi.com" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
 
-    <!-- Metatags para compartilhamento em redes sociais -->
-    <meta property="og:title" content="Seu Título Aqui" />
-    <meta property="og:description" content="Descrição do seu site aqui" />
-    <meta property="og:image" content="URL_da_imagem_a_ser_compartilhada" />
-    <meta property="og:url" content="URL_do_seu_site" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="Nome do seu site" />
+    <!-- Favicon -->
+    <link rel="icon" id="favicon" href="/favicons/light/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/light/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/light/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/light/favicon-16x16.png" />
+    <link rel="mask-icon" href="/favicons/light/safari-pinned-tab.svg" color="#1e1e1e" />
+    <link rel="shortcut icon" href="/favicons/light/favicon.ico" />
 
-    <!-- Metatags para o Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Seu Título Aqui" />
-    <meta name="twitter:description" content="Descrição do seu site aqui" />
-    <meta name="twitter:image" content="URL_da_imagem_a_ser_compartilhada" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
 
-    <!-- Metatags para o Windows -->
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="URL_do_ícone_do_seu_site" />
     <meta name="theme-color" content="#ffffff" />
 
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
 
+    <!-- External CSS -->
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/utils/themeManager/themeManager.ts"></script>
   </body>
 </html>
