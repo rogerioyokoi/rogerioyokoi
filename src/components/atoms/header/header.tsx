@@ -12,7 +12,7 @@ const Header: FC<HeaderProps> = ({ useShadow, fixed, justifyContent = 'justify-b
   const shadowClass = useShadow ? 'shadow-md' : '';
   const fixedClass = fixed ? 'fixed top-0 left-0' : 'relative';
 
-  const componentClasses = `w-full flex ${fixedClass} ${shadowClass} ${justifyContent}`;
+  const componentClasses = `w-full flex bg-white dark:bg-slate-800 h-16 items-center px-6 ${fixedClass} ${shadowClass} ${justifyContent}`;
 
   return <header className={componentClasses}>{children}</header>;
 };
