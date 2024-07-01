@@ -1,0 +1,65 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Components > Atom > Title > Snapshot > Should component matches snapshot with all props 1`] = `
+<div>
+  <div
+    class="uppercase text-bold"
+  >
+    <div
+      class="flex gap-2"
+    >
+      <div
+        aria-hidden="true"
+        class="relative w-6"
+      >
+        <div
+          class="absolute left-0 top-[44%] h-[4px] w-6 bg-amber-500 rounded-[10px]"
+        />
+      </div>
+      <div>
+        <h1
+          class="text-amber-500 text-3xl lg:text-4xl"
+          data-testid="title-heading"
+        >
+          Test Title Prop
+        </h1>
+      </div>
+    </div>
+    <div
+      class="flex text-lg lg:text-2xl ml-8"
+      data-testid="title-subheading"
+    >
+      Test Subtitle Prop
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components > Atom > Title > Snapshot > Should component matches snapshot without Subtitle 1`] = `
+<div>
+  <div
+    class="uppercase text-bold"
+  >
+    <div
+      class="flex gap-2"
+    >
+      <div
+        aria-hidden="true"
+        class="relative w-6"
+      >
+        <div
+          class="absolute left-0 top-[44%] h-[4px] w-6 bg-amber-500 rounded-[10px]"
+        />
+      </div>
+      <div>
+        <h1
+          class="text-amber-500 text-3xl lg:text-4xl"
+          data-testid="title-heading"
+        >
+          Test Title Prop
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+`;
