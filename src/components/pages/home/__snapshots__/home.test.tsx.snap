@@ -1,0 +1,149 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Components > Pages > Home > Snapshot > Should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col-reverse xl:flex-row gap-6 w-100 items-center"
+  >
+    <div
+      class="w-100 xl:w-2/4 flex justify-center"
+    >
+      <div
+        class="relative overflow-hidden rounded-full border-amber-500 border-4 bg-gray-200"
+        data-testid="avatar-container"
+        style="width: 450px; height: 450px;"
+      >
+        <picture
+          data-testid="avatar-picture"
+        >
+          <img
+            alt="Foto de rosto do proprietário do website: Rogério Yokoi"
+            class="object-cover w-full h-full opacity-0"
+            data-testid="avatar-image"
+            height="450"
+            src="/src/assets/pessoal.jpg"
+            width="450"
+          />
+        </picture>
+        <div
+          class="absolute inset-0 bg-gray-300 animate-pulse"
+          data-testid="avatar-loading"
+        />
+      </div>
+    </div>
+    <div
+      class="w-100 xl:w-2/4 flex flex-col gap-6"
+    >
+      <div
+        class="uppercase text-bold"
+      >
+        <div
+          class="flex gap-2"
+        >
+          <div
+            aria-hidden="true"
+            class="relative w-6"
+          >
+            <div
+              class="absolute left-0 top-[44%] h-[4px] w-6 bg-amber-500 rounded-[10px]"
+            />
+          </div>
+          <div>
+            <h1
+              class="text-amber-500 text-3xl lg:text-4xl"
+              data-testid="title-heading"
+            >
+              Olá, eu sou Rogério Yokoi
+            </h1>
+          </div>
+        </div>
+        <div
+          class="flex text-lg lg:text-2xl ml-8"
+          data-testid="title-subheading"
+        >
+          Engenheiro de software Front-End
+        </div>
+      </div>
+      <p
+        data-testid="home-description"
+      >
+        Sou um brasileiro, situado em Minas Gerais. Um engenheiro de software front-end, motivado pela minha paixão em criar experiências digitais intuitivas e refinadas. Especializo-me em desenvolver interfaces limpas e amigáveis para usuário, assim como aplicações web. Meu compromisso está em criar soluções de software excepcionais que impactem positivamente a vida dos usuários e enriqueçam suas interações digitais.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pages > Home > Snapshot > Should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col-reverse xl:flex-row gap-6 w-100 items-center"
+  >
+    <div
+      class="w-100 xl:w-2/4 flex justify-center"
+    >
+      <div
+        class="relative overflow-hidden rounded-full border-amber-500 border-4 bg-gray-200"
+        data-testid="avatar-container"
+        style="width: 450px; height: 450px;"
+      >
+        <picture
+          data-testid="avatar-picture"
+        >
+          <img
+            alt="Foto de rosto do proprietário do website: Rogério Yokoi"
+            class="object-cover w-full h-full opacity-0"
+            data-testid="avatar-image"
+            height="450"
+            src="/src/assets/pessoal.jpg"
+            width="450"
+          />
+        </picture>
+        <div
+          class="absolute inset-0 bg-gray-300 animate-pulse"
+          data-testid="avatar-loading"
+        />
+      </div>
+    </div>
+    <div
+      class="w-100 xl:w-2/4 flex flex-col gap-6"
+    >
+      <div
+        class="uppercase text-bold"
+      >
+        <div
+          class="flex gap-2"
+        >
+          <div
+            aria-hidden="true"
+            class="relative w-6"
+          >
+            <div
+              class="absolute left-0 top-[44%] h-[4px] w-6 bg-amber-500 rounded-[10px]"
+            />
+          </div>
+          <div>
+            <h1
+              class="text-amber-500 text-3xl lg:text-4xl"
+              data-testid="title-heading"
+            >
+              Olá, eu sou Rogério Yokoi
+            </h1>
+          </div>
+        </div>
+        <div
+          class="flex text-lg lg:text-2xl ml-8"
+          data-testid="title-subheading"
+        >
+          Engenheiro de software Front-End
+        </div>
+      </div>
+      <p
+        data-testid="home-description"
+      >
+        Sou um brasileiro, situado em Minas Gerais. Um engenheiro de software front-end, motivado pela minha paixão em criar experiências digitais intuitivas e refinadas. Especializo-me em desenvolver interfaces limpas e amigáveis para usuário, assim como aplicações web. Meu compromisso está em criar soluções de software excepcionais que impactem positivamente a vida dos usuários e enriqueçam suas interações digitais.
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -27,6 +27,7 @@ export default mergeConfig(
           functions: 0,
           lines: 0,
           statements: 0,
+          perFile: true,
         },
       },
     },
