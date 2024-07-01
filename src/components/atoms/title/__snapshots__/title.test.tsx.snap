@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Components > Atom > Title > Snapshot > Should component matches snapshot with all props 1`] = `
+exports[`Components > Atoms > Title > Snapshot > Should component matches snapshot with all props 1`] = `
 <div>
   <div
     class="uppercase text-bold"
@@ -35,7 +35,7 @@ exports[`Components > Atom > Title > Snapshot > Should component matches snapsho
 </div>
 `;
 
-exports[`Components > Atom > Title > Snapshot > Should component matches snapshot without Subtitle 1`] = `
+exports[`Components > Atoms > Title > Snapshot > Should component matches snapshot without Subtitle 1`] = `
 <div>
   <div
     class="uppercase text-bold"

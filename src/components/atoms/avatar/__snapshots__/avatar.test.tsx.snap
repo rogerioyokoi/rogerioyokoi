@@ -1,0 +1,65 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot with sources 1`] = `
+<div>
+  <div
+    class="relative overflow-hidden rounded-full border-amber-500 border-4 bg-gray-200"
+    data-testid="avatar-container"
+    style="width: 150px; height: 150px;"
+  >
+    <picture
+      data-testid="avatar-picture"
+    >
+      <source
+        data-testid="avatar-source"
+        media="(min-width: 600px)"
+        srcset="https://via.placeholder.com/600x400"
+      />
+      <source
+        data-testid="avatar-source"
+        media="(min-width: 300px)"
+        srcset="https://via.placeholder.com/300x200"
+      />
+      <img
+        alt="Avatar de exemplo"
+        class="object-cover w-full h-full opacity-0"
+        data-testid="avatar-image"
+        height="150"
+        src="https://via.placeholder.com/150"
+        width="150"
+      />
+    </picture>
+    <div
+      class="absolute inset-0 bg-gray-300 animate-pulse"
+      data-testid="avatar-loading"
+    />
+  </div>
+</div>
+`;
+
+exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot without sources 1`] = `
+<div>
+  <div
+    class="relative overflow-hidden rounded-full border-amber-500 border-4 bg-gray-200"
+    data-testid="avatar-container"
+    style="width: 150px; height: 150px;"
+  >
+    <picture
+      data-testid="avatar-picture"
+    >
+      <img
+        alt="Avatar de exemplo"
+        class="object-cover w-full h-full opacity-0"
+        data-testid="avatar-image"
+        height="150"
+        src="https://via.placeholder.com/150"
+        width="150"
+      />
+    </picture>
+    <div
+      class="absolute inset-0 bg-gray-300 animate-pulse"
+      data-testid="avatar-loading"
+    />
+  </div>
+</div>
+`;

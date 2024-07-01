@@ -11,7 +11,6 @@ describe('Components > Atom > MetaTags', () => {
       render(<MetaTags page="home" />);
 
       const helmet = Helmet.peek();
-      console.log(helmet);
       expect(helmet.title).toBe(title);
       expect(helmet.metaTags).toStrictEqual([
         {

@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { axe } from 'vitest-axe';
 import Title from './title';
 
-describe('Components > Atom > Title', () => {
+describe('Components > Atoms > Title', () => {
   const mockTitleProp = 'Test Title Prop';
   const mockSubTitleProp = 'Test Subtitle Prop';
   const iElmTitleTestId = 'title-heading';
