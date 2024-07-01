@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot with sources 1`] = `
+exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot in loading state with sources 1`] = `
 <div>
   <div
     class="relative overflow-hidden rounded-full border-amber-500 border-4 bg-gray-200"
@@ -37,7 +37,82 @@ exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot with sou
 </div>
 `;
 
-exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot without sources 1`] = `
+exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot with sources after loading state 1`] = `
+<div>
+  <div
+    class="relative overflow-hidden rounded-full border-amber-500 border-4 "
+    data-testid="avatar-container"
+    style="width: 150px; height: 150px;"
+  >
+    <picture
+      data-testid="avatar-picture"
+    >
+      <img
+        alt="Avatar de exemplo"
+        class="object-cover w-full h-full "
+        data-testid="avatar-image"
+        height="150"
+        src="https://via.placeholder.com/150"
+        width="150"
+      />
+    </picture>
+  </div>
+</div>
+`;
+
+exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot with sources on error state 1`] = `
+<div>
+  <div
+    class="relative overflow-hidden rounded-full border-amber-500 border-4 "
+    data-testid="avatar-container"
+    style="width: 150px; height: 150px;"
+  >
+    <picture
+      data-testid="avatar-picture"
+    >
+      <img
+        alt="Avatar de exemplo"
+        class="object-cover w-full h-full opacity-0"
+        data-testid="avatar-image"
+        height="150"
+        src="https://via.placeholder.com/150"
+        width="150"
+      />
+    </picture>
+    <div
+      class="absolute inset-0 flex items-center justify-center bg-red-200 text-red-700"
+      data-testid="avatar-error"
+    >
+      Erro
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot without sources after loading state 1`] = `
+<div>
+  <div
+    class="relative overflow-hidden rounded-full border-amber-500 border-4 "
+    data-testid="avatar-container"
+    style="width: 150px; height: 150px;"
+  >
+    <picture
+      data-testid="avatar-picture"
+    >
+      <img
+        alt="Avatar de exemplo"
+        class="object-cover w-full h-full "
+        data-testid="avatar-image"
+        height="150"
+        src="https://via.placeholder.com/150"
+        width="150"
+      />
+    </picture>
+  </div>
+</div>
+`;
+
+exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot without sources in loading state  1`] = `
 <div>
   <div
     class="relative overflow-hidden rounded-full border-amber-500 border-4 bg-gray-200"
@@ -60,6 +135,35 @@ exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot without 
       class="absolute inset-0 bg-gray-300 animate-pulse"
       data-testid="avatar-loading"
     />
+  </div>
+</div>
+`;
+
+exports[`Components > Atoms > Avatar > Snapshot > Should match snapshot without sources on error state 1`] = `
+<div>
+  <div
+    class="relative overflow-hidden rounded-full border-amber-500 border-4 "
+    data-testid="avatar-container"
+    style="width: 150px; height: 150px;"
+  >
+    <picture
+      data-testid="avatar-picture"
+    >
+      <img
+        alt="Avatar de exemplo"
+        class="object-cover w-full h-full opacity-0"
+        data-testid="avatar-image"
+        height="150"
+        src="https://via.placeholder.com/150"
+        width="150"
+      />
+    </picture>
+    <div
+      class="absolute inset-0 flex items-center justify-center bg-red-200 text-red-700"
+      data-testid="avatar-error"
+    >
+      Erro
+    </div>
   </div>
 </div>
 `;

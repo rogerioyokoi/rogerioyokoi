@@ -15,16 +15,92 @@ describe('Components > Atoms > Avatar', () => {
   const mockBrokenSrc = 'https://example.com/broken-image';
 
   describe('Snapshot', () => {
-    it('Should match snapshot without sources', () => {
+    it('Should match snapshot without sources in loading state ', () => {
       const { container } = render(<Avatar src={mockSrc} alt={mockAlt} size={mockSize} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('Should match snapshot with sources', () => {
+    it('Should match snapshot in loading state with sources', () => {
       const { container } = render(<Avatar src={mockSrc} alt={mockAlt} size={mockSize} sources={mockSources} />);
 
       expect(container).toMatchSnapshot();
+    });
+
+    it('Should match snapshot without sources after loading state', async () => {
+      const { container, getByTestId } = render(<Avatar src={mockSrc} alt={mockAlt} size={mockSize} />);
+
+      const iElmImage = getByTestId(AVATAR_TESTID.IMAGE);
+
+      fireEvent.load(iElmImage);
+
+      setTimeout(() => {
+        fireEvent.load(iElmImage);
+      }, 100);
+
+      await waitFor(() => {
+        expect(container).toMatchSnapshot();
+      });
+    });
+
+    it('Should match snapshot with sources after loading state', async () => {
+      const { container, getByTestId } = render(<Avatar src={mockSrc} alt={mockAlt} size={mockSize} />);
+
+      const iElmImage = getByTestId(AVATAR_TESTID.IMAGE);
+
+      fireEvent.load(iElmImage);
+
+      setTimeout(() => {
+        fireEvent.load(iElmImage);
+      }, 100);
+
+      await waitFor(() => {
+        expect(container).toMatchSnapshot();
+      });
+    });
+
+    it('Should match snapshot without sources on error state', async () => {
+      const { container, getByTestId } = render(<Avatar src={mockSrc} alt={mockAlt} size={mockSize} />);
+
+      const iElmImage = getByTestId(AVATAR_TESTID.IMAGE);
+
+      fireEvent.load(iElmImage);
+
+      setTimeout(() => {
+        fireEvent.load(iElmImage);
+      }, 100);
+
+      fireEvent.error(iElmImage);
+
+      setTimeout(() => {
+        fireEvent.error(iElmImage);
+      }, 100);
+
+      await waitFor(() => {
+        expect(container).toMatchSnapshot();
+      });
+    });
+
+    it('Should match snapshot with sources on error state', async () => {
+      const { container, getByTestId } = render(<Avatar src={mockSrc} alt={mockAlt} size={mockSize} />);
+
+      const iElmImage = getByTestId(AVATAR_TESTID.IMAGE);
+
+      fireEvent.load(iElmImage);
+
+      setTimeout(() => {
+        fireEvent.load(iElmImage);
+      }, 100);
+
+      fireEvent.error(iElmImage);
+
+      setTimeout(() => {
+        fireEvent.error(iElmImage);
+      }, 100);
+
+      await waitFor(() => {
+        expect(container).toMatchSnapshot();
+      });
     });
   });
 
