@@ -10,7 +10,7 @@ const MainContainer: FC<MainContainerProps> = ({ header, children }) => {
       <header className="w-full h-16 fixed top-0 left-0 z-50 flex items-center justify-center shadow-md">
         {header}
       </header>
-      <main className="w-full min-h-fit max-w-[1440px] mt-16 p-4 flex-1 flex items-center">{children}</main>
+      <main className="w-full min-h-fit max-w-[1536px] mt-16 p-6 xl:p-12 flex-1 flex items-center">{children}</main>
     </div>
   );
 };
