@@ -1,0 +1,89 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Components > Atoms > Card > Snapshot > Should match snapshot with Footer and without Header 1`] = `
+<div>
+  <div
+    class="border border-gray-300 dark:border-gray-700 rounded-lg shadow-md"
+    data-testid="card-container"
+  >
+    <div
+      class="py-6 px-10"
+      data-testid="card-content"
+    >
+      Card Childreen Mock
+    </div>
+    <footer
+      class="px-10 pb-6 pt-1"
+      data-testid="card-footer"
+    >
+      &lt;div&gt;Mock Footer Card&lt;/div&gt;
+    </footer>
+  </div>
+</div>
+`;
+
+exports[`Components > Atoms > Card > Snapshot > Should match snapshot with Header and Footer 1`] = `
+<div>
+  <div
+    class="border border-gray-300 dark:border-gray-700 rounded-lg shadow-md"
+    data-testid="card-container"
+  >
+    <header
+      class="px-10 pt-6 pb-1"
+      data-testid="card-header"
+    >
+      &lt;div&gt;Mock Header Card&lt;/div&gt;
+    </header>
+    <div
+      class="py-6 px-10 px-10 py-2"
+      data-testid="card-content"
+    >
+      Card Childreen Mock
+    </div>
+    <footer
+      class="px-10 pb-6 pt-1"
+      data-testid="card-footer"
+    >
+      &lt;div&gt;Mock Footer Card&lt;/div&gt;
+    </footer>
+  </div>
+</div>
+`;
+
+exports[`Components > Atoms > Card > Snapshot > Should match snapshot with Header and without Footer 1`] = `
+<div>
+  <div
+    class="border border-gray-300 dark:border-gray-700 rounded-lg shadow-md"
+    data-testid="card-container"
+  >
+    <header
+      class="px-10 pt-6 pb-1"
+      data-testid="card-header"
+    >
+      &lt;div&gt;Mock Header Card&lt;/div&gt;
+    </header>
+    <div
+      class="py-6 px-10 px-10 pt-2 pb-6"
+      data-testid="card-content"
+    >
+      Card Childreen Mock
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components > Atoms > Card > Snapshot > Should match snapshot without Header and Footer 1`] = `
+<div>
+  <div
+    class="border border-gray-300 dark:border-gray-700 rounded-lg shadow-md"
+    data-testid="card-container"
+  >
+    <div
+      class="py-6 px-10"
+      data-testid="card-content"
+    >
+      Card Childreen Mock
+    </div>
+  </div>
+</div>
+`;
