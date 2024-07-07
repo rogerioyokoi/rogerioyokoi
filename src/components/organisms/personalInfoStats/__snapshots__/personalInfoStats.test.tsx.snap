@@ -1,0 +1,175 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Components > Organisms PersonalInfoStats > Snapshot > Should match snapshot 1`] = `
+<div>
+  <section
+    class="w-full grid grid-cols-2 gap-6"
+    data-testid="personal-info-container"
+  >
+    <div
+      class="border border-gray-300 dark:border-gray-700 rounded-lg shadow-md"
+      data-testid="card-container"
+    >
+      <header
+        class="px-10 pt-6 pb-1"
+        data-testid="card-header"
+      >
+        <h3
+          class="relative text-5xl mb-2 text-amber-500 font-bold"
+          data-testid="stats-card-header"
+        >
+          +10
+        </h3>
+      </header>
+      <div
+        class="py-6 px-10 px-10 pt-2 pb-6"
+        data-testid="card-content"
+      >
+        <div
+          class="relative"
+        >
+          <div
+            class="absolute left-0 top-[44%] h-[4px] w-6 bg-gray-300 dark:bg-gray-700 rounded-[10px]"
+            data-testid="stats-card-decoration"
+          />
+          <p
+            class="m-0 ml-8 relative tracking-wide text-sm"
+            data-testid="stats-card-children"
+          >
+            anos de
+             
+            <span
+              class="block font-bold"
+            >
+              experiência
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border border-gray-300 dark:border-gray-700 rounded-lg shadow-md"
+      data-testid="card-container"
+    >
+      <header
+        class="px-10 pt-6 pb-1"
+        data-testid="card-header"
+      >
+        <h3
+          class="relative text-5xl mb-2 text-amber-500 font-bold"
+          data-testid="stats-card-header"
+        >
+          +6
+        </h3>
+      </header>
+      <div
+        class="py-6 px-10 px-10 pt-2 pb-6"
+        data-testid="card-content"
+      >
+        <div
+          class="relative"
+        >
+          <div
+            class="absolute left-0 top-[44%] h-[4px] w-6 bg-gray-300 dark:bg-gray-700 rounded-[10px]"
+            data-testid="stats-card-decoration"
+          />
+          <p
+            class="m-0 ml-8 relative tracking-wide text-sm"
+            data-testid="stats-card-children"
+          >
+            anos com
+             
+            <span
+              class="block font-bold"
+            >
+              ReactJS
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border border-gray-300 dark:border-gray-700 rounded-lg shadow-md"
+      data-testid="card-container"
+    >
+      <header
+        class="px-10 pt-6 pb-1"
+        data-testid="card-header"
+      >
+        <h3
+          class="relative text-5xl mb-2 text-amber-500 font-bold"
+          data-testid="stats-card-header"
+        >
+          +2
+        </h3>
+      </header>
+      <div
+        class="py-6 px-10 px-10 pt-2 pb-6"
+        data-testid="card-content"
+      >
+        <div
+          class="relative"
+        >
+          <div
+            class="absolute left-0 top-[44%] h-[4px] w-6 bg-gray-300 dark:bg-gray-700 rounded-[10px]"
+            data-testid="stats-card-decoration"
+          />
+          <p
+            class="m-0 ml-8 relative tracking-wide text-sm"
+            data-testid="stats-card-children"
+          >
+            anos com
+             
+            <span
+              class="block font-bold"
+            >
+              VueJS (2)
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border border-gray-300 dark:border-gray-700 rounded-lg shadow-md"
+      data-testid="card-container"
+    >
+      <header
+        class="px-10 pt-6 pb-1"
+        data-testid="card-header"
+      >
+        <h3
+          class="relative text-5xl mb-2 text-amber-500 font-bold"
+          data-testid="stats-card-header"
+        >
+          +2
+        </h3>
+      </header>
+      <div
+        class="py-6 px-10 px-10 pt-2 pb-6"
+        data-testid="card-content"
+      >
+        <div
+          class="relative"
+        >
+          <div
+            class="absolute left-0 top-[44%] h-[4px] w-6 bg-gray-300 dark:bg-gray-700 rounded-[10px]"
+            data-testid="stats-card-decoration"
+          />
+          <p
+            class="m-0 ml-8 relative tracking-wide text-sm"
+            data-testid="stats-card-children"
+          >
+            anos com
+             
+            <span
+              class="block font-bold"
+            >
+              Angular 2+
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

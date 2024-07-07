@@ -10,6 +10,12 @@ export interface Meta {
   url: string;
 }
 
+export interface PersonalInfoStats {
+  reference: string;
+  text: string;
+  highlight: string;
+}
+
 export const baseDescription: string =
   'Sou um brasileiro, situado em Minas Gerais. Um engenheiro de software front-end, motivado pela minha paixão em criar experiências digitais intuitivas e refinadas. Especializo-me em desenvolver interfaces limpas e amigáveis para usuário, assim como aplicações web. Meu compromisso está em criar soluções de software excepcionais que impactem positivamente a vida dos usuários e enriqueçam suas interações digitais.';
 
@@ -40,3 +46,26 @@ export const metas: Record<Page, Meta> = {
     url: 'https://www.rogerioyokoi.com/sobre-mim',
   },
 };
+
+export const personalInfoStats: PersonalInfoStats[] = [
+  {
+    reference: '+10',
+    text: 'anos de',
+    highlight: 'experiência',
+  },
+  {
+    reference: '+6',
+    text: 'anos com',
+    highlight: 'ReactJS',
+  },
+  {
+    reference: '+2',
+    text: 'anos com',
+    highlight: 'VueJS (2)',
+  },
+  {
+    reference: '+2',
+    text: 'anos com',
+    highlight: 'Angular 2+',
+  },
+];
