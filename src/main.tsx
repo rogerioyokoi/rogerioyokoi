@@ -5,9 +5,14 @@ import './index.css';
 import router from './routes/routes';
 
 import * as Sentry from '@sentry/react';
+import mixpanel from 'mixpanel-browser';
 
 import LogRocket from 'logrocket';
 import setupLogRocketReact from 'logrocket-react';
+
+// Near entry of your product, init Mixpanel
+mixpanel.init('36fc564194633c37e300015c0d0259cd', { debug: true, track_pageview: true, persistence: 'localStorage' });
+
 LogRocket.init('hsfpcp/rogerio-oliveira-yokoi');
 setupLogRocketReact(LogRocket);
 
@@ -27,6 +32,10 @@ LogRocket.getSessionURL((sessionURL) => {
   Sentry.withScope((scope) => {
     scope.setExtra('sessionURL', sessionURL);
   });
+});
+
+LogRocket.getSessionURL((sessionURL) => {
+  mixpanel.track('LogRocket', { sessionURL: sessionURL });
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
