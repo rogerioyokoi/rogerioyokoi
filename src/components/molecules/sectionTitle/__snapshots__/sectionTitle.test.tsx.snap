@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Components > SectionTitle > Snapshot > Should match snapshot with Highlight 1`] = `
+<div>
+  Mock Section Title Text
+  <span
+    class="ml-2 text-amber-500"
+    data-testid="section-title-highlight"
+  >
+    Mock Section Title Highlight
+  </span>
+</div>
+`;
+
+exports[`Components > SectionTitle > Snapshot > Should match snapshot without Highlight 1`] = `
+<div>
+  Mock Section Title Text
+</div>
+`;

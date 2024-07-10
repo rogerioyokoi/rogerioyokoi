@@ -2,7 +2,8 @@ import { RouteObject, createBrowserRouter } from 'react-router-dom';
 import Home from '../components/pages/home/home';
 import RootPage from '../components/pages/rootPage/rootPage';
 
-import { HomeIcon } from '@heroicons/react/16/solid';
+import About from '@/components/pages/about/about';
+import { HomeIcon, UserIcon } from '@heroicons/react/16/solid';
 import { ComponentType } from 'react';
 
 /**
@@ -46,9 +47,9 @@ export const navRoutes: RouteNavConfig[] = [
   {
     id: ROUTES_NAV_IDS.ABOUT,
     path: ROUTES_NAV_IDS.ABOUT,
-    component: Home,
+    component: About,
     name: 'Sobre mim',
-    Icon: HomeIcon,
+    Icon: UserIcon,
   },
 ];
 

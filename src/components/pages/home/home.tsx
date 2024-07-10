@@ -10,8 +10,8 @@ import Photo from '../../../assets/pessoal.jpg';
 import Button from '../../atoms/button/button';
 import Icon from '../../atoms/icon/icon';
 
+import LinkedInButton from '@/components/molecules/linkedInButton/linkedInButton';
 import { ROUTES_NAV_IDS } from '@/routes/routes';
-import LinkedINIcon from '@assets/svg/linkedIn.svg?react';
 
 const Home: FC = () => {
   const smallSizePhoto = useMediaQuery('(max-width: 1279px)');
@@ -34,15 +34,7 @@ const Home: FC = () => {
         <p data-testid="home-description">{baseDescription}</p>
 
         <div className="flex w-full justify-center gap-12">
-          <Button
-            href="https://www.linkedin.com/in/rogerioyokoi/"
-            target="new"
-            color="secondary"
-            endIcon={<Icon style={{ backgroundColor: '#0077b5' }} Component={<LinkedINIcon />} />}
-          >
-            {' '}
-            Linked IN{' '}
-          </Button>
+          <LinkedInButton />
 
           <Button
             href={ROUTES_NAV_IDS.ABOUT}
