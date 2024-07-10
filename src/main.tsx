@@ -6,6 +6,11 @@ import router from './routes/routes';
 
 import * as Sentry from '@sentry/react';
 
+import LogRocket from 'logrocket';
+import setupLogRocketReact from 'logrocket-react';
+LogRocket.init('hsfpcp/rogerio-oliveira-yokoi');
+setupLogRocketReact(LogRocket);
+
 Sentry.init({
   dsn: 'https://6b20b2b2d4dafc17e14ff78ff9648a7a@o4507583782125568.ingest.us.sentry.io/4507583783895040',
   integrations: [Sentry.browserTracingIntegration(), Sentry.replayIntegration()],
@@ -16,6 +21,12 @@ Sentry.init({
   // Session Replay
   replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
   replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
+});
+
+LogRocket.getSessionURL((sessionURL) => {
+  Sentry.withScope((scope) => {
+    scope.setExtra('sessionURL', sessionURL);
+  });
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

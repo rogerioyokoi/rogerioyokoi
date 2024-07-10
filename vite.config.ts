@@ -1,4 +1,4 @@
-import { sentryVitePlugin } from "@sentry/vite-plugin";
+import { sentryVitePlugin } from '@sentry/vite-plugin';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 import { defineConfig } from 'vite';
@@ -11,10 +11,14 @@ export default defineConfig({
     open: true,
   },
 
-  plugins: [react(), svgr(), sentryVitePlugin({
-    org: "rogerio-yokoi",
-    project: "portfolio"
-  })],
+  plugins: [
+    react(),
+    svgr(),
+    sentryVitePlugin({
+      org: 'rogerio-yokoi',
+      project: 'portfolio',
+    }),
+  ],
 
   resolve: {
     alias: {
@@ -24,6 +28,6 @@ export default defineConfig({
   },
 
   build: {
-    sourcemap: true
-  }
+    sourcemap: true,
+  },
 });
