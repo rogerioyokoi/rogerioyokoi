@@ -3,12 +3,16 @@
 exports[`Components > Atoms > Button > Snapshot > Should match snapshot basic anchor 1`] = `
 <div>
   <a
-    class="flex items-center gap-4 rounded-full transition-colors ease-in-out duration-300 font-medium pl-6 pr-6 text-lg bg-amber-400 hover:bg-amber-600 text-slate-900"
+    class="flex items-center justify-between gap-4 rounded-full transition-colors ease-in-out duration-300 font-medium pl-6 pr-6 text-lg bg-amber-400 hover:bg-amber-600 text-slate-900"
     data-testid="button-anchor"
     href="https://example.com"
   >
      
-    My Button Test
+    <span
+      class="w-100"
+    >
+      My Button Test
+    </span>
      
   </a>
 </div>
@@ -17,11 +21,15 @@ exports[`Components > Atoms > Button > Snapshot > Should match snapshot basic an
 exports[`Components > Atoms > Button > Snapshot > Should match snapshot basic button 1`] = `
 <div>
   <button
-    class="flex items-center gap-4 rounded-full transition-colors ease-in-out duration-300 font-medium pl-6 pr-6 text-lg bg-amber-400 hover:bg-amber-600 text-slate-900"
+    class="flex items-center justify-between gap-4 rounded-full transition-colors ease-in-out duration-300 font-medium pl-6 pr-6 text-lg bg-amber-400 hover:bg-amber-600 text-slate-900"
     data-testid="button-type"
   >
      
-    My Button Test
+    <span
+      class="w-100"
+    >
+      My Button Test
+    </span>
      
   </button>
 </div>
