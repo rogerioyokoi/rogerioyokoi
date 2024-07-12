@@ -38,7 +38,7 @@ const Button: FC<ButtonProps> = ({
   });
 
   const getClassNames = clsx(
-    'flex items-center gap-4 rounded-full transition-colors ease-in-out duration-300 font-medium',
+    'flex items-center justify-between gap-4 rounded-full transition-colors ease-in-out duration-300 font-medium',
     {
       'pl-6': !startIcon && size === 'large',
       'pr-6': !endIcon && size === 'large',
@@ -50,14 +50,14 @@ const Button: FC<ButtonProps> = ({
   if ('href' in rest) {
     return (
       <a data-testid="button-anchor" className={getClassNames} {...rest}>
-        {startIcon} {children} {endIcon}
+        {startIcon} <span className="w-100">{children}</span> {endIcon}
       </a>
     );
   }
 
   return (
     <button data-testid="button-type" className={getClassNames} {...rest}>
-      {startIcon} {children} {endIcon}
+      {startIcon} <span className="w-100">{children}</span> {endIcon}
     </button>
   );
 };

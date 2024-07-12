@@ -8,30 +8,37 @@ import { FC } from 'react';
 
 import Curriculo from '@assets/curriculo-rogerio-yokoi.pdf';
 
-const PersonalInfoLInks: FC = () => {
+interface PersonalInfoLInksProps {
+  showTitle?: boolean;
+  variant?: 'content' | 'outlined';
+}
+
+const PersonalInfoLInks: FC<PersonalInfoLInksProps> = ({ showTitle = false, variant = 'content' }) => {
   return (
     <>
-      <Headline as="h3" level="headline" size="small">
-        Links <span className="text-amber-500">úteis</span>
-      </Headline>
+      {showTitle && (
+        <Headline as="h3" level="headline" size="small">
+          Links <span className="text-amber-500">úteis</span>
+        </Headline>
+      )}
 
-      <div className="flex w-full justify-between flex-wrap">
+      <div className="flex flex-col sm:flex-row w-full justify-between flex-wrap gap-6">
         <Button
           href={Curriculo}
           download
           target="new"
           color="primary"
-          variant="outlined"
+          variant={variant}
           endIcon={<Icon className="bg-amber-500 text-white" Component={<ArrowDownTrayIcon />} />}
         >
           Baixar Curriculo
         </Button>
-        <LinkedInButton variant="outlined" />
+        <LinkedInButton variant={variant} />
         <Button
           href="https://github.com/rogerioyokoi"
           target="new"
           color="neutral"
-          variant="outlined"
+          variant={variant}
           endIcon={
             <Icon
               className="bg-neutral-800 dark:bg-neutral-200 dark:text-neutral-800 text-neutral-200"

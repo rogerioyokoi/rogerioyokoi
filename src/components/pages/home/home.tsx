@@ -1,17 +1,11 @@
-import { PaperAirplaneIcon } from '@heroicons/react/24/solid';
 import { FC, useMemo } from 'react';
 import { baseDescription } from '../../../assets/data/meta.const';
 import Avatar from '../../atoms/avatar/avatar';
 import Title from '../../atoms/title/title';
 
+import PersonalInfoLInks from '@/components/organisms/personalInfoLinks/personalInfoLinks';
 import { useMediaQuery } from '@react-hook/media-query';
 import Photo from '../../../assets/pessoal.jpg';
-
-import Button from '../../atoms/button/button';
-import Icon from '../../atoms/icon/icon';
-
-import LinkedInButton from '@/components/molecules/linkedInButton/linkedInButton';
-import { ROUTES_NAV_IDS } from '@/routes/routes';
 
 const Home: FC = () => {
   const smallSizePhoto = useMediaQuery('(max-width: 1279px)');
@@ -33,17 +27,7 @@ const Home: FC = () => {
 
         <p data-testid="home-description">{baseDescription}</p>
 
-        <div className="flex w-full justify-center gap-12">
-          <LinkedInButton />
-
-          <Button
-            href={ROUTES_NAV_IDS.ABOUT}
-            color="primary"
-            endIcon={<Icon className="bg-amber-500" Component={<PaperAirplaneIcon />} />}
-          >
-            Mais sobre mim
-          </Button>
-        </div>
+        <PersonalInfoLInks />
       </div>
     </div>
   );
