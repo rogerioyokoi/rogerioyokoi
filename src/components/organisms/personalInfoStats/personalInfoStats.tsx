@@ -12,7 +12,7 @@ const PersonalInfoStats: FC = () => {
   };
 
   return (
-    <section data-testid="personal-info-container" className="w-full grid grid-cols-2 gap-6">
+    <section data-testid="personal-info-container" className="w-full grid grid-cols-2 md:grid-cols-4  gap-6">
       {renderStatsCard()}
     </section>
   );

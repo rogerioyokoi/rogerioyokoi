@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { FC, PropsWithChildren, ReactNode } from 'react';
 
 export interface CardProps extends PropsWithChildren {
-  variant?: 'outlined';
+  variant?: 'outlined' | 'contained';
   size?: 'large';
   rounded?: 'large';
   shadow?: 'medium';
@@ -21,6 +21,7 @@ const Card: FC<CardProps> = ({
 }) => {
   const getContainerClasses = clsx({
     'border border-gray-300 dark:border-gray-700': variant === 'outlined',
+    'bg-neutral-200 dark:bg-gray-800': variant === 'contained',
   });
 
   const getSizeClasses = clsx({
