@@ -36,7 +36,7 @@ const SectionSkill: FC<SectionSkillProps> = ({ Icon, title, items, reverse = fal
           <Icon className="text-gray-300 dark:text-gray-700" aria-hidden="true" />
         </div>
         <div className="w-full lg:w-4/6 xl:w-5/6 flex justify-center items-center">
-          <div className="w-full grid grid-cols-2 xl:grid-cols-3 gap-6">{renderItems}</div>
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">{renderItems}</div>
         </div>
       </div>
     </Section>

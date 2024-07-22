@@ -11,7 +11,7 @@ interface TitleProps {
 const Title: FC<TitleProps> = ({ icon, headline, highlightColor = 'amber-500', highlightText }) => {
   return (
     <div className="flex w-auto m-auto gap-6">
-      <div className={`h-14 w-14 text-${highlightColor}`}>{icon}</div>
+      <div className={`h-14 m-w-14 w-14 text-${highlightColor}`}>{icon}</div>
       <Headline level="display" className="uppercase">
         {headline} {highlightText && <span className={`text-${highlightColor}`}>{highlightText}</span>}
       </Headline>
