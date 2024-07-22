@@ -71,7 +71,9 @@ describe('Components > Atoms > NavMenuItem', () => {
     );
 
     const navLink = screen.getByText('Home').closest('a');
-    expect(navLink).toHaveClass('text-blue-500 border-blue-500 dark:text-blue-400 dark:border-blue-400');
+    expect(navLink).toHaveClass(
+      'flex gap-2 h-full w-full items-center hover:text-amber-500 border-b px-4 transition-all text-amber-500 border-amber-500 dark:border-amber-400'
+    );
   });
 
   it('Should have correct classes when inactive', () => {
@@ -108,7 +110,7 @@ describe('Components > Atoms > NavMenuItem', () => {
 
     const navLink = screen.getByText('Home').closest('a');
     expect(navLink).toHaveClass(
-      'flex gap-2 h-full w-full items-center hover:text-blue-500 border-b px-4 transition-all'
+      'flex gap-2 h-full w-full items-center hover:text-amber-500 border-b px-4 transition-all'
     );
   });
 
