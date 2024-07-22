@@ -236,6 +236,14 @@ describe('Components > Atoms > Avatar', () => {
       });
     });
 
+    it('Should container have default style with size prop when not received', () => {
+      const { getByTestId } = render(<Avatar src={mockSrc} alt={mockAlt} />);
+
+      const iElmContainer = getByTestId(AVATAR_TESTID.CONTAINER);
+
+      expect(iElmContainer).toHaveStyle({ width: '100px', height: '100px' });
+    });
+
     it('Should container have correct style with size prop', () => {
       const { getByTestId } = render(<Avatar src={mockSrc} alt={mockAlt} size={mockSize} />);
 
