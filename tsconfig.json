@@ -24,7 +24,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@types/*": ["src/types/*"]
     }
   },
   "include": ["src", ".eslintrc.cjs", "vite.config.ts", "vitest.config.ts", "vitest.setup.ts"],
