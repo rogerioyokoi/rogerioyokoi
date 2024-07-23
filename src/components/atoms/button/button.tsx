@@ -1,15 +1,7 @@
-import clsx from 'clsx';
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, FC, ReactNode } from 'react';
+import { FC } from 'react';
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-  AnchorHTMLAttributes<HTMLAnchorElement> & {
-    customProp?: string;
-    endIcon?: ReactNode;
-    startIcon?: ReactNode;
-    size?: 'small' | 'medium' | 'large';
-    color?: 'primary' | 'secondary' | 'neutral';
-    variant?: 'content' | 'outlined';
-  };
+import { BUTTON_TESTID, ButtonProps } from './button.type';
+import { buttonClasses } from './buttonClasses';
 
 const Button: FC<ButtonProps> = ({
   children,
@@ -18,46 +10,32 @@ const Button: FC<ButtonProps> = ({
   size = 'large',
   color = 'primary',
   variant = 'content',
+  rounded = 'full',
   ...rest
 }) => {
-  const getTextClasses = clsx({
-    'text-sm': size === 'small',
-    'text-base': size === 'medium',
-    'text-lg': size === 'large',
-  });
+  const classNames = buttonClasses({ startIcon, endIcon, size, color, variant, rounded });
 
-  const getColorClassNames = clsx({
-    'bg-amber-400 hover:bg-amber-600 text-slate-900': color === 'primary' && variant === 'content',
-    'bg-blue-400 hover:bg-blue-600': color === 'secondary' && variant === 'content',
-    'bg-neutral-800 hover:bg-neutral-950': color === 'neutral' && variant === 'content',
-
-    'border border-amber-400 text-amber-400': color === 'primary' && variant === 'outlined',
-    'border border-blue-400 text-blue-400': color === 'secondary' && variant === 'outlined',
-    'border border-neutral-800 text-neutral-800 dark:border-neutral-200 dark:text-neutral-200':
-      color === 'neutral' && variant === 'outlined',
-  });
-
-  const getClassNames = clsx(
-    'flex items-center justify-between gap-4 rounded-full transition-colors ease-in-out duration-300 font-medium',
-    {
-      'pl-6': !startIcon && size === 'large',
-      'pr-6': !endIcon && size === 'large',
-    },
-    getTextClasses,
-    getColorClassNames
+  const generateContent = () => (
+    <>
+      {startIcon && <span data-testid={BUTTON_TESTID.START}>{startIcon}</span>}
+      <span data-testid={BUTTON_TESTID.CONTENT} className="w-100">
+        {children}
+      </span>
+      {endIcon && <span data-testid={BUTTON_TESTID.END}>{endIcon}</span>}
+    </>
   );
 
   if ('href' in rest) {
     return (
-      <a data-testid="button-anchor" className={getClassNames} {...rest}>
-        {startIcon} <span className="w-100">{children}</span> {endIcon}
+      <a data-testid={BUTTON_TESTID.ANCHOR} className={classNames} {...rest}>
+        {generateContent()}
       </a>
     );
   }
 
   return (
-    <button data-testid="button-type" className={getClassNames} {...rest}>
-      {startIcon} <span className="w-100">{children}</span> {endIcon}
+    <button data-testid={BUTTON_TESTID.BUTTON} className={classNames} {...rest}>
+      {generateContent()}
     </button>
   );
 };

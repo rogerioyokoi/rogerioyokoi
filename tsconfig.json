@@ -25,7 +25,8 @@
     "paths": {
       "@/*": ["src/*"],
       "@assets/*": ["src/assets/*"],
-      "@types/*": ["src/types/*"]
+      "@types/*": ["src/types/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src", ".eslintrc.cjs", "vite.config.ts", "vitest.config.ts", "vitest.setup.ts"],

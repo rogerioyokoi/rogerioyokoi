@@ -15,7 +15,7 @@ const Headline: FC<HeadlineProps> = ({ as: Tag = 'h1', level, size = 'medium', c
   const levelStyles = {
     display: {
       large: 'text-6xl font-bold',
-      medium: 'text-5xl font-bold',
+      medium: 'text-4xl lg:text-5xl font-bold',
       small: 'text-4xl font-bold',
     },
     headline: {
