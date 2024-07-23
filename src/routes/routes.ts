@@ -2,8 +2,11 @@ import { RouteObject, createBrowserRouter } from 'react-router-dom';
 import Home from '../components/pages/home/home';
 import RootPage from '../components/pages/rootPage/rootPage';
 
-import { HomeIcon } from '@heroicons/react/16/solid';
+import Skills from '@/components/pages/skills/skills';
+import { HomeIcon } from '@heroicons/react/24/outline';
 import { ComponentType } from 'react';
+
+import { PersonalSkillIcon } from '@assets/data/icons';
 
 /**
  * Interface for navigation route configuration.
@@ -30,6 +33,7 @@ export enum ROUTES_NAV_IDS {
   /** Home route ID */
   HOME = '/',
   ABOUT = '/sobre-mim',
+  SKILLS = '/habilidades',
 }
 
 /**
@@ -43,13 +47,13 @@ export const navRoutes: RouteNavConfig[] = [
     name: 'Início',
     Icon: HomeIcon,
   },
-  // {
-  //   id: ROUTES_NAV_IDS.ABOUT,
-  //   path: ROUTES_NAV_IDS.ABOUT,
-  //   component: About,
-  //   name: 'Sobre mim',
-  //   Icon: UserIcon,
-  // },
+  {
+    id: ROUTES_NAV_IDS.SKILLS,
+    path: ROUTES_NAV_IDS.SKILLS,
+    component: Skills,
+    name: 'Habilidades',
+    Icon: PersonalSkillIcon,
+  },
 ];
 
 /**
