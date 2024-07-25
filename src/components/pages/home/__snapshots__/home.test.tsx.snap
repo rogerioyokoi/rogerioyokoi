@@ -83,7 +83,7 @@ exports[`Components > Pages > Home > Snapshot > Should match snapshot 1`] = `
             class="w-100"
             data-testid="button-content"
           >
-            Baixar Curriculo
+            Baixar Currículo
           </span>
           <span
             data-testid="button-end"
@@ -119,7 +119,7 @@ exports[`Components > Pages > Home > Snapshot > Should match snapshot 1`] = `
             class="w-100"
             data-testid="button-content"
           >
-            Linked IN
+            LinkedIn
           </span>
           <span
             data-testid="button-end"
@@ -142,7 +142,7 @@ exports[`Components > Pages > Home > Snapshot > Should match snapshot 1`] = `
           </span>
         </a>
         <a
-          class="flex items-center justify-between gap-4 transition-colors ease-in-out duration-300 font-medium pl-6 text-lg bg-neutral-800 hover:bg-neutral-950 rounded-full"
+          class="flex items-center justify-between gap-4 transition-colors ease-in-out duration-300 font-medium pl-6 text-lg bg-neutral-800 text-neutral-200 hover:bg-neutral-950 rounded-full"
           data-testid="button-anchor"
           href="https://github.com/rogerioyokoi"
           target="new"
