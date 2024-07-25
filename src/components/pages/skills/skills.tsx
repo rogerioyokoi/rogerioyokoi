@@ -23,7 +23,7 @@ const Skills: FC = () => {
   return (
     <div className="w-full flex flex-col gap-12 justify-center">
       <Title
-        icon={<PersonalSkillIcon className="text-amber-500" />}
+        icon={<PersonalSkillIcon className="text-amber-500 w-14 h-14" />}
         headline="Habilidades e"
         highlightColor="amber-500"
         highlightText="Competências"

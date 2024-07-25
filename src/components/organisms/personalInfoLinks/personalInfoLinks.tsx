@@ -6,14 +6,15 @@ import GithubIcon from '@assets/svg/github.svg?react';
 import { ArrowDownTrayIcon } from '@heroicons/react/16/solid';
 import { FC } from 'react';
 
+import { Variant } from '@/types';
 import Curriculo from '@assets/curriculo-rogerio-yokoi.pdf';
 
 interface PersonalInfoLInksProps {
   showTitle?: boolean;
-  variant?: 'content' | 'outlined';
+  variant?: Variant;
 }
 
-const PersonalInfoLInks: FC<PersonalInfoLInksProps> = ({ showTitle = false, variant = 'content' }) => {
+const PersonalInfoLInks: FC<PersonalInfoLInksProps> = ({ showTitle = false, variant = 'contained' }) => {
   return (
     <>
       {showTitle && (
@@ -31,7 +32,7 @@ const PersonalInfoLInks: FC<PersonalInfoLInksProps> = ({ showTitle = false, vari
           variant={variant}
           endIcon={<Icon className="bg-amber-500 text-white" Component={<ArrowDownTrayIcon />} />}
         >
-          Baixar Curriculo
+          Baixar Currículo
         </Button>
         <LinkedInButton variant={variant} />
         <Button

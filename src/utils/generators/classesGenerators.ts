@@ -46,9 +46,9 @@ export const roundedClassGenerator = (rounded: Rounded): string =>
  */
 export const colorClassesGenerator = ({ color, variant }: ColorVariant): string => {
   return clsx({
-    'bg-amber-400 hover:bg-amber-600 text-slate-900': color === 'primary' && variant === 'content',
-    'bg-blue-400 hover:bg-blue-600': color === 'secondary' && variant === 'content',
-    'bg-neutral-800 hover:bg-neutral-950': color === 'neutral' && variant === 'content',
+    'bg-amber-400 hover:bg-amber-600 text-slate-900': color === 'primary' && variant === 'contained',
+    'bg-blue-400 hover:bg-blue-600': color === 'secondary' && variant === 'contained',
+    'bg-neutral-800 text-neutral-200 hover:bg-neutral-950': color === 'neutral' && variant === 'contained',
 
     'border border-amber-400 text-amber-400': color === 'primary' && variant === 'outlined',
     'border border-blue-400 text-blue-400': color === 'secondary' && variant === 'outlined',

@@ -1,11 +1,12 @@
+import { Rounded, Shadow, Size, Variant } from '@/types';
 import clsx from 'clsx';
 import { FC, PropsWithChildren, ReactNode } from 'react';
 
 export interface CardProps extends PropsWithChildren {
-  variant?: 'outlined' | 'contained';
-  size?: 'large';
-  rounded?: 'large';
-  shadow?: 'medium';
+  variant?: Variant;
+  size?: Size;
+  rounded?: Rounded;
+  shadow?: Shadow;
   header?: ReactNode;
   footer?: ReactNode;
 }
@@ -15,7 +16,7 @@ const Card: FC<CardProps> = ({
   variant = 'outlined',
   size = 'large',
   rounded = 'large',
-  shadow = 'medium',
+  shadow = 'md',
   header,
   footer,
 }) => {
@@ -42,7 +43,7 @@ const Card: FC<CardProps> = ({
   });
 
   const getShadowClass = clsx({
-    'shadow-md': shadow === 'medium',
+    'shadow-md': shadow === 'md',
   });
 
   const cardClasses = clsx(getContainerClasses, getRoundedClass, getShadowClass);

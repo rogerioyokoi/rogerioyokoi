@@ -222,7 +222,7 @@ describe('Components > Atoms > Button', () => {
       const props: ButtonProps = {
         size: 'large',
         color: 'primary',
-        variant: 'content',
+        variant: 'contained',
         rounded: 'full',
       };
       const { getByTestId } = renderComponent({});

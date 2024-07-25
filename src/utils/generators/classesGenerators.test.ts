@@ -49,18 +49,18 @@ describe('Utils > Tailwind Classes Generator', () => {
 
   describe('Color and variant class generator', () => {
     it('Should return correct classes for primary color and content variant', () => {
-      expect(colorClassesGenerator({ color: 'primary', variant: 'content' })).toBe(
+      expect(colorClassesGenerator({ color: 'primary', variant: 'contained' })).toBe(
         'bg-amber-400 hover:bg-amber-600 text-slate-900'
       );
     });
 
     it('Should return correct classes for secondary color and content variant', () => {
-      expect(colorClassesGenerator({ color: 'secondary', variant: 'content' })).toBe('bg-blue-400 hover:bg-blue-600');
+      expect(colorClassesGenerator({ color: 'secondary', variant: 'contained' })).toBe('bg-blue-400 hover:bg-blue-600');
     });
 
     it('Should return correct classes for neutral color and content variant', () => {
-      expect(colorClassesGenerator({ color: 'neutral', variant: 'content' })).toBe(
-        'bg-neutral-800 hover:bg-neutral-950'
+      expect(colorClassesGenerator({ color: 'neutral', variant: 'contained' })).toBe(
+        'bg-neutral-800 text-neutral-200 hover:bg-neutral-950'
       );
     });
 
@@ -83,7 +83,7 @@ describe('Utils > Tailwind Classes Generator', () => {
     });
 
     it('Should return an empty string for invalid color or variant', () => {
-      expect(colorClassesGenerator({ color: 'invalid' as Color, variant: 'content' })).toBe('');
+      expect(colorClassesGenerator({ color: 'invalid' as Color, variant: 'contained' })).toBe('');
       expect(colorClassesGenerator({ color: 'primary', variant: 'invalid' as Variant })).toBe('');
     });
   });

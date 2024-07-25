@@ -9,7 +9,7 @@ const Button: FC<ButtonProps> = ({
   startIcon,
   size = 'large',
   color = 'primary',
-  variant = 'content',
+  variant = 'contained',
   rounded = 'full',
   ...rest
 }) => {

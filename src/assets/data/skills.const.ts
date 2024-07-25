@@ -121,7 +121,7 @@ export const metodologyPratics: Skill[] = [
 
 export const skillsCollection: SkillCollection[] = [
   {
-    title: 'Habilidades interpressoais',
+    title: 'Habilidades interpessoais',
     key: 'habilidades-interpessoais',
     Icon: SoftSkillIcon,
     data: softSkills,

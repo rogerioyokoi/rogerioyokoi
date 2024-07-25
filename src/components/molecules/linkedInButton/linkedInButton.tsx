@@ -1,4 +1,4 @@
-import Button, { ButtonProps } from '@/components/atoms/button/button';
+import Button, { ButtonProps } from '@/components/atoms/button';
 import Icon from '@/components/atoms/icon/icon';
 import LinkedINIcon from '@assets/svg/linkedIn.svg?react';
 import { FC } from 'react';
@@ -12,7 +12,7 @@ const LinkedInButton: FC<ButtonProps> = (props) => {
       endIcon={<Icon style={{ backgroundColor: '#0077b5', color: '#fff' }} Component={<LinkedINIcon />} />}
       {...props}
     >
-      Linked IN
+      LinkedIn
     </Button>
   );
 };
