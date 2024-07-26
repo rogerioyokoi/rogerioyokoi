@@ -1,5 +1,5 @@
 import { XMarkIcon } from '@heroicons/react/16/solid';
-import { FC, PropsWithChildren, useEffect } from 'react';
+import { FC, PropsWithChildren } from 'react';
 import IconButton from '../../atoms/iconButton/iconButton';
 
 export interface DrawerProps extends PropsWithChildren {
@@ -37,19 +37,6 @@ const Drawer: FC<DrawerProps> = ({
     }
   };
 
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && isOpen) {
-        onClose();
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isOpen, onClose]);
-
   return (
     isOpen && (
       <>
@@ -59,6 +46,7 @@ const Drawer: FC<DrawerProps> = ({
           aria-label={ariaLabelCloseBackdrop}
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={onClose}
+          onTouchEnd={onClose}
           onKeyDown={(event) => {
             if (event.key === 'Enter' || event.key === ' ') {
               onClose();

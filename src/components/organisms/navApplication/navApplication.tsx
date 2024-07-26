@@ -22,7 +22,7 @@ const NavApplication: FC = () => {
             <Bars3Icon />
           </IconButton>
           <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} direction="right">
-            <NavMenu isVertical />
+            <NavMenu isVertical callback={toggleDrawer} />
           </Drawer>
         </>
       )}
