@@ -42,7 +42,7 @@ export interface Skill {
 }
 
 export const baseDescription: string =
-  'Sou um brasileiro, situado em Minas Gerais. Um engenheiro de software front-end, motivado pela minha paixão em criar experiências digitais intuitivas e refinadas. Especializo-me em desenvolver interfaces limpas e amigáveis para usuário, assim como aplicações web. Meu compromisso está em criar soluções de software excepcionais que impactem positivamente a vida dos usuários e enriqueçam suas interações digitais.';
+  'Sou Um engenheiro de software front-end, brasileiro, situado em Minas Gerais e motivado pela minha paixão em criar experiências digitais intuitivas e refinadas. Me especializei em desenvolver interfaces com design limpo e de aspecto amigável aos olhos dos usuários. Meus estudos e atuação são voltados para aplicações web e mobile; buscando sempre presar pelo meu compromisso em criar soluções de software excepcionais. Sigo portanto, empenhado para que o meu trabalho impacte positivamente a vida dos usuários finais e enriqueçam suas interações digitais.';
 
 export const baseKeywords: string =
   'Engenheiro de Software Front-End, Desenvolvedor Front - End, UI / UX, Desenvolvimento de Aplicações Web, React Developer, Desenvolvedor React, Vue.js Developer, Desenvolvedor Vue.js, Desenvolvedor JavaScript, Design de Interfaces, Desenvolvimento de Interfaces de Usuário';

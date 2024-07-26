@@ -1,5 +1,5 @@
 import { XMarkIcon } from '@heroicons/react/16/solid';
-import { FC, PropsWithChildren } from 'react';
+import { FC, PropsWithChildren, useEffect } from 'react';
 import IconButton from '../../atoms/iconButton/iconButton';
 
 export interface DrawerProps extends PropsWithChildren {
@@ -36,6 +36,19 @@ const Drawer: FC<DrawerProps> = ({
         return '';
     }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
 
   return (
     isOpen && (
