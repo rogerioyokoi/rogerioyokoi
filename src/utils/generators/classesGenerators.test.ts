@@ -1,6 +1,11 @@
-import { Color, Rounded, Size, Variant } from '@/types';
+import { Color, Rounded, Shadow, Size, Variant } from '@/types';
 import { describe, expect, it } from 'vitest';
-import { colorClassesGenerator, roundedClassGenerator, sizeTextClassesGenerator } from './classesGenerators';
+import {
+  colorClassesGenerator,
+  roundedClassGenerator,
+  shadowClassGenerator,
+  sizeTextClassesGenerator,
+} from './classesGenerators';
 
 describe('Utils > Tailwind Classes Generator', () => {
   describe('Text size generator', () => {
@@ -18,6 +23,10 @@ describe('Utils > Tailwind Classes Generator', () => {
 
     it('Should return an empty string for invalid size', () => {
       expect(sizeTextClassesGenerator('extra-large' as Size)).toBe('');
+    });
+
+    it('Should return a empty string for undefined size', () => {
+      expect(sizeTextClassesGenerator()).toBe('');
     });
   });
 
@@ -44,6 +53,10 @@ describe('Utils > Tailwind Classes Generator', () => {
 
     it('Should return an empty string for invalid rounded', () => {
       expect(roundedClassGenerator('extra' as Rounded)).toBe('');
+    });
+
+    it('Should return a empty string for undefined rounded', () => {
+      expect(roundedClassGenerator()).toBe('');
     });
   });
 
@@ -85,6 +98,24 @@ describe('Utils > Tailwind Classes Generator', () => {
     it('Should return an empty string for invalid color or variant', () => {
       expect(colorClassesGenerator({ color: 'invalid' as Color, variant: 'contained' })).toBe('');
       expect(colorClassesGenerator({ color: 'primary', variant: 'invalid' as Variant })).toBe('');
+    });
+
+    it('Should return an empty string for invalid color and variant', () => {
+      expect(colorClassesGenerator({ color: 'invalid' as Color, variant: 'invalid' as Variant })).toBe('');
+    });
+  });
+
+  describe('Shadow class generator', () => {
+    it('Should return shadow-md when prop is md', () => {
+      expect(shadowClassGenerator('md')).toBe('shadow-md');
+    });
+
+    it('Should return an empty string for invalid shadow', () => {
+      expect(shadowClassGenerator('extra-large' as Shadow)).toBe('');
+    });
+
+    it('Should return a empty string for undefined shadow', () => {
+      expect(shadowClassGenerator()).toBe('');
     });
   });
 });

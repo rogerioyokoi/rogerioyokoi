@@ -2,6 +2,7 @@ import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { axe } from 'vitest-axe';
 import Card from './card';
+import { CARD_TESTID } from './card.types';
 
 describe('Components > Atoms > Card', () => {
   const renderComponent = (type: 'withoutHeader' | 'withoutFooter' | 'onlyContent' | 'full') => {
@@ -81,10 +82,10 @@ describe('Components > Atoms > Card', () => {
     it('Should render card correctly without Header and Footer', () => {
       const { getByTestId, queryByTestId } = renderComponent('onlyContent');
 
-      const iElmContainer = getByTestId('card-container');
-      const iElmHeader = queryByTestId('card-header');
-      const iElmContent = getByTestId('card-content');
-      const iElmFooter = queryByTestId('card-footer');
+      const iElmContainer = getByTestId(CARD_TESTID.CONTAINER);
+      const iElmHeader = queryByTestId(CARD_TESTID.HEADER);
+      const iElmContent = getByTestId(CARD_TESTID.CONTENT);
+      const iElmFooter = queryByTestId(CARD_TESTID.FOOTER);
 
       expect(iElmContainer).toBeInTheDocument();
       expect(iElmContent).toBeInTheDocument();
@@ -95,10 +96,10 @@ describe('Components > Atoms > Card', () => {
     it('Should render card correctly with Header without Footer', () => {
       const { getByTestId, queryByTestId } = renderComponent('withoutFooter');
 
-      const iElmContainer = getByTestId('card-container');
-      const iElmHeader = getByTestId('card-header');
-      const iElmContent = getByTestId('card-content');
-      const iElmFooter = queryByTestId('card-footer');
+      const iElmContainer = getByTestId(CARD_TESTID.CONTAINER);
+      const iElmHeader = getByTestId(CARD_TESTID.HEADER);
+      const iElmContent = getByTestId(CARD_TESTID.CONTENT);
+      const iElmFooter = queryByTestId(CARD_TESTID.FOOTER);
 
       expect(iElmContainer).toBeInTheDocument();
       expect(iElmContent).toBeInTheDocument();
@@ -109,10 +110,10 @@ describe('Components > Atoms > Card', () => {
     it('Should render card correctly with Footer without Header', () => {
       const { getByTestId, queryByTestId } = renderComponent('withoutHeader');
 
-      const iElmContainer = getByTestId('card-container');
-      const iElmHeader = queryByTestId('card-header');
-      const iElmContent = getByTestId('card-content');
-      const iElmFooter = getByTestId('card-footer');
+      const iElmContainer = getByTestId(CARD_TESTID.CONTAINER);
+      const iElmHeader = queryByTestId(CARD_TESTID.HEADER);
+      const iElmContent = getByTestId(CARD_TESTID.CONTENT);
+      const iElmFooter = getByTestId(CARD_TESTID.FOOTER);
 
       expect(iElmContainer).toBeInTheDocument();
       expect(iElmContent).toBeInTheDocument();
@@ -123,10 +124,10 @@ describe('Components > Atoms > Card', () => {
     it('Should render card correctly with header and Footer', () => {
       const { getByTestId } = renderComponent('full');
 
-      const iElmContainer = getByTestId('card-container');
-      const iElmHeader = getByTestId('card-header');
-      const iElmContent = getByTestId('card-content');
-      const iElmFooter = getByTestId('card-footer');
+      const iElmContainer = getByTestId(CARD_TESTID.CONTAINER);
+      const iElmHeader = getByTestId(CARD_TESTID.HEADER);
+      const iElmContent = getByTestId(CARD_TESTID.CONTENT);
+      const iElmFooter = getByTestId(CARD_TESTID.FOOTER);
 
       expect(iElmContainer).toBeInTheDocument();
       expect(iElmContent).toBeInTheDocument();
@@ -139,7 +140,7 @@ describe('Components > Atoms > Card', () => {
     it('Should apply correct classes to card container with default props', () => {
       const { getByTestId } = renderComponent('onlyContent');
 
-      const iElmContainer = getByTestId('card-container');
+      const iElmContainer = getByTestId(CARD_TESTID.CONTAINER);
 
       expect(iElmContainer).toHaveClass('border border-gray-300 dark:border-gray-700 rounded-lg shadow-md');
     });
@@ -147,7 +148,7 @@ describe('Components > Atoms > Card', () => {
     it('Should apply correct classes to card content with default props', () => {
       const { getByTestId } = renderComponent('onlyContent');
 
-      const iElmContent = getByTestId('card-content');
+      const iElmContent = getByTestId(CARD_TESTID.CONTENT);
 
       expect(iElmContent).toHaveClass('py-6 px-10');
     });
@@ -155,8 +156,8 @@ describe('Components > Atoms > Card', () => {
     it('Should apply correct classes to card content with Header without Footer on default props', () => {
       const { getByTestId } = renderComponent('withoutFooter');
 
-      const iElmContent = getByTestId('card-content');
-      const iElmHeader = getByTestId('card-header');
+      const iElmContent = getByTestId(CARD_TESTID.CONTENT);
+      const iElmHeader = getByTestId(CARD_TESTID.HEADER);
 
       expect(iElmContent).toHaveClass('px-10 pt-2 pb-6');
       expect(iElmHeader).toHaveClass('px-10 pt-6 pb-1');
@@ -165,9 +166,9 @@ describe('Components > Atoms > Card', () => {
     it('Should apply correct classes to card content with Header and Footer on default props', () => {
       const { getByTestId } = renderComponent('full');
 
-      const iElmContent = getByTestId('card-content');
-      const iElmHeader = getByTestId('card-header');
-      const iElmFooter = getByTestId('card-footer');
+      const iElmContent = getByTestId(CARD_TESTID.CONTENT);
+      const iElmHeader = getByTestId(CARD_TESTID.HEADER);
+      const iElmFooter = getByTestId(CARD_TESTID.FOOTER);
 
       expect(iElmContent).toHaveClass('px-10 py-2');
       expect(iElmHeader).toHaveClass('px-10 pt-6 pb-1');

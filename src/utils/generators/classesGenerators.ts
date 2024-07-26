@@ -5,7 +5,7 @@
  *              help in dynamically applying styles to components in a consistent manner.
  */
 
-import { ColorVariant, Rounded, Size } from '@/types';
+import { ColorVariant, Rounded, Shadow, Size } from '@/types';
 import clsx from 'clsx';
 
 /**
@@ -14,7 +14,7 @@ import clsx from 'clsx';
  * @param {Size} size - The size variant, can be 'small', 'medium', or 'large'.
  * @returns {string} Tailwind CSS class for text size.
  */
-export const sizeTextClassesGenerator = (size: Size): string =>
+export const sizeTextClassesGenerator = (size?: Size): string =>
   clsx({
     'text-sm': size === 'small',
     'text-base': size === 'medium',
@@ -27,7 +27,7 @@ export const sizeTextClassesGenerator = (size: Size): string =>
  * @param {Rounded} rounded - The rounded size, can be "sm" | "md" | "lg" | "full" | "none".
  * @returns {string} Tailwind CSS class for rounded corners.
  */
-export const roundedClassGenerator = (rounded: Rounded): string =>
+export const roundedClassGenerator = (rounded?: Rounded): string =>
   clsx({
     rounded: rounded === 'sm',
     'rounded-md': rounded === 'md',
@@ -39,7 +39,7 @@ export const roundedClassGenerator = (rounded: Rounded): string =>
 /**
  * Generates color and variant classes for Tailwind CSS based on the provided color and variant.
  *
- * @param {ColorClassesGenerator} params - An object containing `color` and `variant`.
+ * @param {ColorVariant} params - An object containing `color` and `variant`.
  * @param {Color} params.color - The color variant, can be 'primary', 'secondary', 'neutral', etc.
  * @param {Variant} params.variant - The style variant, can be 'content' or 'outlined'.
  * @returns {string} Tailwind CSS class for color and variant.
@@ -56,3 +56,14 @@ export const colorClassesGenerator = ({ color, variant }: ColorVariant): string 
       color === 'neutral' && variant === 'outlined',
   });
 };
+
+/**
+ * Generates shadow classes for Tailwind CSS based on the provided shadow.
+ *
+ * @param {Shadow} shadow - The rounded size, can be "md".
+ * @returns {string} Tailwind CSS class for shadow.
+ */
+export const shadowClassGenerator = (shadow?: Shadow): string =>
+  clsx({
+    'shadow-md': shadow === 'md',
+  });
