@@ -1,7 +1,8 @@
-import { Color, Rounded, Shadow, Size, Variant } from '@/types';
+import { Color, Fixed, Rounded, Shadow, Size, Variant } from '@/types';
 import { describe, expect, it } from 'vitest';
 import {
   colorClassesGenerator,
+  fixedClassGenerator,
   roundedClassGenerator,
   shadowClassGenerator,
   sizeTextClassesGenerator,
@@ -95,6 +96,10 @@ describe('Utils > Tailwind Classes Generator', () => {
       );
     });
 
+    it('Should return correct classes for white color and without variant', () => {
+      expect(colorClassesGenerator({ color: 'white' })).toBe('bg-white dark:bg-gray-800');
+    });
+
     it('Should return an empty string for invalid color or variant', () => {
       expect(colorClassesGenerator({ color: 'invalid' as Color, variant: 'contained' })).toBe('');
       expect(colorClassesGenerator({ color: 'primary', variant: 'invalid' as Variant })).toBe('');
@@ -116,6 +121,32 @@ describe('Utils > Tailwind Classes Generator', () => {
 
     it('Should return a empty string for undefined shadow', () => {
       expect(shadowClassGenerator()).toBe('');
+    });
+  });
+
+  describe('Fixed class generator', () => {
+    it('Should return fixed top classes when prop is top', () => {
+      expect(fixedClassGenerator('top')).toBe('top-0 left-0 right-0');
+    });
+
+    it('Should return fixed bottom classes when prop is bottom', () => {
+      expect(fixedClassGenerator('bottom')).toBe('bottom-0 left-0 right-0');
+    });
+
+    it('Should return fixed left classes when prop is left', () => {
+      expect(fixedClassGenerator('left')).toBe('top-0 left-0 bottom-0');
+    });
+
+    it('Should return fixed right classes when prop is right', () => {
+      expect(fixedClassGenerator('right')).toBe('top-0 right-0 bottom-0');
+    });
+
+    it('Should return an empty string for invalid fixed', () => {
+      expect(fixedClassGenerator('top-left' as Fixed)).toBe('');
+    });
+
+    it('Should return a empty string for undefined shadow', () => {
+      expect(fixedClassGenerator()).toBe('');
     });
   });
 });

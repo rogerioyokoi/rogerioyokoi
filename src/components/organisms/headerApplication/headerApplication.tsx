@@ -6,7 +6,7 @@ import NavApplication from '../navApplication/navApplication';
 
 const HeaderApplication: FC = () => {
   return (
-    <Header useShadow fixed>
+    <Header shadow="md" fixed="top">
       <div>
         <Logo />
       </div>

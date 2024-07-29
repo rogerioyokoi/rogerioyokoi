@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Components > Atoms > Header > Snapshot > Should match snapshot with default props 1`] = `
+<div>
+  <header
+    class="w-full flex h-16 items-center px-6 bg-white dark:bg-gray-800 justify-between"
+    data-testid="header"
+  >
+    <div>
+      Mock Header Children
+    </div>
+  </header>
+</div>
+`;

@@ -5,7 +5,7 @@
  *              help in dynamically applying styles to components in a consistent manner.
  */
 
-import { ColorVariant, Rounded, Shadow, Size } from '@/types';
+import { ColorVariant, Fixed, Rounded, Shadow, Size } from '@/types';
 import clsx from 'clsx';
 
 /**
@@ -49,6 +49,7 @@ export const colorClassesGenerator = ({ color, variant }: ColorVariant): string 
     'bg-amber-400 hover:bg-amber-600 text-slate-900': color === 'primary' && variant === 'contained',
     'bg-blue-400 hover:bg-blue-600': color === 'secondary' && variant === 'contained',
     'bg-neutral-800 text-neutral-200 hover:bg-neutral-950': color === 'neutral' && variant === 'contained',
+    'bg-white dark:bg-gray-800': color === 'white' && !variant,
 
     'border border-amber-400 text-amber-400': color === 'primary' && variant === 'outlined',
     'border border-blue-400 text-blue-400': color === 'secondary' && variant === 'outlined',
@@ -66,4 +67,18 @@ export const colorClassesGenerator = ({ color, variant }: ColorVariant): string 
 export const shadowClassGenerator = (shadow?: Shadow): string =>
   clsx({
     'shadow-md': shadow === 'md',
+  });
+
+/**
+ * Generates fixed classes for Tailwind CSS based on the provided fixed value.
+ *
+ * @param {Fixed} Fixed - The rounded size, can be "md".
+ * @returns {string} Tailwind CSS class for shadow.
+ */
+export const fixedClassGenerator = (fixed?: Fixed): string =>
+  clsx({
+    'top-0 left-0 right-0': fixed === 'top',
+    'bottom-0 left-0 right-0': fixed === 'bottom',
+    'top-0 left-0 bottom-0': fixed === 'left',
+    'top-0 right-0 bottom-0': fixed === 'right',
   });
